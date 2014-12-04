@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PlayerViewController.h
 //  PlayerInterfaceLibrary
 //
 //  Created by Giuseppe Barbalinardo on 12/3/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface PlayerViewController : UIViewController
 
 @end
-
