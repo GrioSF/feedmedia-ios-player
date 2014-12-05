@@ -13,8 +13,8 @@
 
 @interface BigPlayerViewController ()
 @property (strong, nonatomic) FMAudioPlayer *audioPlayer;
+@property (strong, nonatomic) FMAudioItem *audioItem;
 
-@property (nonatomic) float previousVolumeValue;
 @property (nonatomic) BOOL isMute;
 
 @property (weak, nonatomic) IBOutlet UILabel *artistLabel;
@@ -46,15 +46,18 @@
     if (self = [super initWithNibName:nibName bundle:nibBundle]) {
         _audioPlayer = [FMAudioPlayer sharedPlayer];
         _isMute = NO;
-        _previousVolumeValue = .7;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[FMAudioPlayer sharedPlayer] setMixVolume:self.previousVolumeValue];
-    self.volumeSlider.value = self.previousVolumeValue;
+    [self updateVolume:self.audioPlayer.mixVolume];
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:self
+                                   selector:@selector(updatePlayingInfo)
+                                   userInfo:nil
+                                    repeats:YES];
     
     
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerActiveStationDidChangeNotification object:self.audioPlayer];
@@ -63,9 +66,18 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerSkipFailedNotification object:self.audioPlayer];
 }
 
+
+- (void)updatePlayingInfo {
+    float progress = self.audioPlayer.currentPlaybackTime / self.audioPlayer.currentItemDuration;
+    self.progressIndicator.progress = progress;
+    long currentTime = lroundf(self.audioPlayer.currentPlaybackTime);
+    self.timeElapsedLabel.text = [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60];
+}
+
 - (IBAction)playButtonTouched:(id)sender {
     [self.audioPlayer play];
-//    [self updateTrackInfo];
+    [self updateTrackInfo];
+    
     [self.playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
 }
 
@@ -81,13 +93,24 @@
 
 - (IBAction)volumeButtonTouched:(id)sender {
     if (self.isMute) {
-        [self updateVolume:self.previousVolumeValue];
+        [self unMuteVolume];
     } else {
-        if (self.volumeSlider.value != 0) {
-            self.previousVolumeValue = self.volumeSlider.value;
-        }
-        [self updateVolume:0];
+        [self muteVolume];
     }
+    self.isMute = !self.isMute;
+}
+
+- (void)muteVolume {
+    if (self.volumeSlider.value != 0) {
+        [[NSUserDefaults standardUserDefaults] setFloat:self.volumeSlider.value forKey:@"previousVolumeValue"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    [self updateVolume:0];
+}
+
+- (void)unMuteVolume {
+    float previousVolumeValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"previousVolumeValue"];
+    [self updateVolume:previousVolumeValue];
 }
 
 - (IBAction)volumeSliderValueChanged:(id)sender {
@@ -113,13 +136,12 @@
 }
 
 - (void)updateTrackInfo {
-    FMAudioItem *audioItem = [self.audioPlayer currentItem];
-    self.artistLabel.text = audioItem.artist;
-    self.titleLabel.text = audioItem.name;
-    self.albumLabel.text = audioItem.album;
-    long trackLength = lroundf(audioItem.duration);
-    self.totalTimeLabel.text = [NSString stringWithFormat:@"%ld:%ld", trackLength/60, trackLength%60];
-//    self.progressIndicator.progress = audioItem.duration;
+    self.audioItem = [self.audioPlayer currentItem];
+    self.artistLabel.text = self.audioItem.artist;
+    self.titleLabel.text = self.audioItem.name;
+    self.albumLabel.text = self.audioItem.album;
+    long trackLength = lroundf(self.audioItem.duration);
+    self.totalTimeLabel.text = [NSString stringWithFormat:@"%ld:%02ld", trackLength / 60, trackLength % 60];
 }
 
 - (IBAction)closeButtonTouched:(id)sender {
