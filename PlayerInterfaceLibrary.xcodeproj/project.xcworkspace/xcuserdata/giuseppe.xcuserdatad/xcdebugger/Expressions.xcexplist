@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.audioPlayer.session">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[BigPlayerViewController updateTrackInfo:]:BigPlayerViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BigPlayerViewController playButtonTouched:]:BigPlayerViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.audioPlayer.session">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -81,9 +81,9 @@
                                 <action selector="skipButtonTouched:" destination="-1" eventType="touchUpInside" id="SIs-Eg-OfK"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-A7-yKk">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-A7-yKk">
                             <rect key="frame" x="7" y="187" width="31" height="21"/>
-                            <state key="normal" backgroundImage="volume-high.png">
+                            <state key="normal" image="volume-high.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -98,6 +98,7 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-cX-IMa">
                             <rect key="frame" x="126" y="147" width="28" height="21"/>
+                            <color key="backgroundColor" red="0.69197487602412389" green="0.27570295227366337" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             <state key="normal" image="play.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -105,8 +106,9 @@
                                 <action selector="playButtonTouched:" destination="-1" eventType="touchUpInside" id="4n9-qi-qpu"/>
                             </connections>
                         </button>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-P9-Jrq">
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-P9-Jrq">
                             <rect key="frame" x="47" y="183" width="189" height="31"/>
+                            <color key="tintColor" red="0.75157828282828287" green="0.75157828282828287" blue="0.75157828282828287" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="volumeSliderValueChanged:" destination="-1" eventType="valueChanged" id="CdJ-EU-JuF"/>
                             </connections>
