@@ -39,6 +39,7 @@
 		E37FF43E1A312DE9009B1200 /* volume-low.png in Resources */ = {isa = PBXBuildFile; fileRef = E37FF4331A312DE9009B1200 /* volume-low.png */; };
 		E37FF43F1A312DE9009B1200 /* volume-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = E37FF4341A312DE9009B1200 /* volume-medium.png */; };
 		E37FF4401A312DE9009B1200 /* volume-mute.png in Resources */ = {isa = PBXBuildFile; fileRef = E37FF4351A312DE9009B1200 /* volume-mute.png */; };
+		E3A293A31A328CF300629AC0 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A293A21A328CF300629AC0 /* slider.png */; };
 		E3E2EA0D1A302A03001014EE /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E2EA0B1A302A03001014EE /* PlayerViewController.m */; };
 		E3E2EA0E1A302A03001014EE /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E2EA0C1A302A03001014EE /* PlayerViewController.xib */; };
 		E3E2EA361A302D16001014EE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E2EA351A302D16001014EE /* CoreMedia.framework */; };
@@ -109,6 +110,7 @@
 		E37FF4331A312DE9009B1200 /* volume-low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-low.png"; sourceTree = "<group>"; };
 		E37FF4341A312DE9009B1200 /* volume-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-medium.png"; sourceTree = "<group>"; };
 		E37FF4351A312DE9009B1200 /* volume-mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-mute.png"; sourceTree = "<group>"; };
+		E3A293A21A328CF300629AC0 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
 		E3E2EA0A1A302A03001014EE /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerViewController.h; path = Player/PlayerViewController.h; sourceTree = "<group>"; };
 		E3E2EA0B1A302A03001014EE /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerViewController.m; path = Player/PlayerViewController.m; sourceTree = "<group>"; };
 		E3E2EA0C1A302A03001014EE /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerViewController.xib; path = Player/PlayerViewController.xib; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		E34B9C6E1A30DE640032AAE7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E3A293A21A328CF300629AC0 /* slider.png */,
 				E37FF42B1A312DE9009B1200 /* close.png */,
 				E37FF42C1A312DE9009B1200 /* pause.png */,
 				E37FF42D1A312DE9009B1200 /* play.png */,
@@ -363,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A293A31A328CF300629AC0 /* slider.png in Resources */,
 				E362CF321A3024AB0013A8CD /* Images.xcassets in Resources */,
 				E37FF4371A312DE9009B1200 /* pause.png in Resources */,
 				E37FF43B1A312DE9009B1200 /* thumbsdown.png in Resources */,

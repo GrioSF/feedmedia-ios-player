@@ -118,9 +118,10 @@
                                 <action selector="playButtonTouched:" destination="-1" eventType="touchUpInside" id="4n9-qi-qpu"/>
                             </connections>
                         </button>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-P9-Jrq">
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="210" placeholderIntrinsicHeight="20" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-P9-Jrq">
                             <rect key="frame" x="53" y="185" width="214" height="31"/>
                             <color key="tintColor" red="0.75157828282828287" green="0.75157828282828287" blue="0.75157828282828287" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="thumbTintColor" red="0.0" green="0.82914668748637599" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="volumeSliderValueChanged:" destination="-1" eventType="valueChanged" id="CdJ-EU-JuF"/>
                             </connections>

@@ -52,7 +52,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Update current status
     [self updateVolume:self.audioPlayer.mixVolume];
+    [self updatePlayButton];
+    [self updatePlayingInfo];
+    [self updateTrackInfo];
+    
+    // Change default slider appearance
+    UIImage *thumbImage = [UIImage imageNamed:@"slider"];
+    [[UISlider appearance] setThumbImage:thumbImage forState:UIControlStateNormal];
+    [[UISlider appearance] setThumbImage:thumbImage forState:UIControlStateHighlighted];
+
+    
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
                                    selector:@selector(updatePlayingInfo)
@@ -66,23 +77,22 @@
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerSkipFailedNotification object:self.audioPlayer];
 }
 
-
-- (void)updatePlayingInfo {
-    float progress = self.audioPlayer.currentPlaybackTime / self.audioPlayer.currentItemDuration;
-    self.progressIndicator.progress = progress;
-    long currentTime = lroundf(self.audioPlayer.currentPlaybackTime);
-    self.timeElapsedLabel.text = [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60];
-}
-
 - (IBAction)playButtonTouched:(id)sender {
-    [self.audioPlayer play];
+    [self updatePlayButton];
+    switch(self.audioPlayer.playbackState) {
+        case FMAudioPlayerPlaybackStatePlaying:
+            [self.audioPlayer pause];
+            break;
+        default:
+            [self.audioPlayer play];
+            break;
+    }
     [self updateTrackInfo];
-    
-    [self.playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
 }
+
 
 - (IBAction)skipButtonTouched:(id)sender {
-    [[FMAudioPlayer sharedPlayer] skip];
+    [self.audioPlayer skip];
 }
 
 - (IBAction)thumbsUpButtonTouched:(id)sender {
@@ -94,10 +104,11 @@
 - (IBAction)volumeButtonTouched:(id)sender {
     if (self.isMute) {
         [self unMuteVolume];
+        self.isMute = NO;
     } else {
         [self muteVolume];
+        self.isMute = YES;
     }
-    self.isMute = !self.isMute;
 }
 
 - (void)muteVolume {
@@ -116,6 +127,24 @@
 - (IBAction)volumeSliderValueChanged:(id)sender {
     UISlider *slider = (UISlider *)sender;
     [self updateVolume:slider.value];
+}
+
+- (void)updatePlayingInfo {
+    float progress = self.audioPlayer.currentPlaybackTime / self.audioPlayer.currentItemDuration;
+    self.progressIndicator.progress = progress;
+    long currentTime = lroundf(self.audioPlayer.currentPlaybackTime);
+    self.timeElapsedLabel.text = [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60];
+}
+
+- (void) updatePlayButton {
+    switch(self.audioPlayer.playbackState) {
+        case FMAudioPlayerPlaybackStatePlaying:
+            [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+            break;
+        default:
+            [self.playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+            break;
+    }
 }
 
 - (void)updateVolume:(float)volumeValue {
