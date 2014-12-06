@@ -85,8 +85,12 @@
         case FMAudioPlayerPlaybackStatePlaying:
             [self.audioPlayer pause];
             break;
-        default:
+        case FMAudioPlayerPlaybackStateReadyToPlay:
+        case FMAudioPlayerPlaybackStatePaused:
+        case FMAudioPlayerPlaybackStateComplete:
             [self.audioPlayer play];
+            break;
+        default:
             break;
     }
     [self updatePlayer];
@@ -136,49 +140,71 @@
     self.progressIndicator.progress = progress;
     long currentTime = lroundf(self.audioPlayer.currentPlaybackTime);
     self.timeElapsedLabel.text = [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60];
+    long trackLength = lroundf(self.audioItem.duration);
+    self.totalTimeLabel.text = [NSString stringWithFormat:@"%ld:%02ld", trackLength / 60, trackLength % 60];
+    if ((self.audioPlayer.playbackState == FMAudioPlayerPlaybackStateComplete)) {
+        self.timeElapsedLabel.text = @"";
+        self.totalTimeLabel.text = @"";
+    }
 }
+
 
 - (void)updatePlayer {
     [self updateVolume:self.audioPlayer.mixVolume];
     [self updatePlayingInfo];
     [self updateTrackInfo];
     
-    
     switch(self.audioPlayer.playbackState) {
         case FMAudioPlayerPlaybackStatePlaying:
             [self.playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
             self.skipButton.alpha = 1;
             self.playButton.alpha = 1;
+            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateWaitingForItem:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.playButton.alpha = 0.25;
             self.skipButton.alpha = 0.25;
+            self.timeElapsedLabel.text = @"-:--";
+            self.totalTimeLabel.text = @"-:--";
+            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateReadyToPlay:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.skipButton.alpha = 1;
             self.playButton.alpha = 1;
+            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStatePaused:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.skipButton.alpha = 1;
             self.playButton.alpha = 1;
+            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateStalled:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.playButton.alpha = 0.25;
             self.skipButton.alpha = 0.25;
+            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateRequestingSkip:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.playButton.alpha = 1;
             self.skipButton.alpha = 0.25;
+            self.timeElapsedLabel.text = @"-:--";
+            self.totalTimeLabel.text = @"-:--";
+            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateComplete:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
-            self.playButton.alpha = 0.25;
+            self.playButton.alpha = 1;
             self.skipButton.alpha = 1;
+            self.timeElapsedLabel.text = @"";
+            self.totalTimeLabel.text = @"";
+            self.progressIndicator.hidden = YES;
+            self.thumbsDownButton.alpha = 0.25;
+            self.thumbsUpButton.alpha = 0.25;
+            self.skipButton.alpha = 0.25;
             break;
         default:
             break;
@@ -208,8 +234,6 @@
     self.artistLabel.text = self.audioItem.artist;
     self.titleLabel.text = self.audioItem.name;
     self.albumLabel.text = self.audioItem.album;
-    long trackLength = lroundf(self.audioItem.duration);
-    self.totalTimeLabel.text = [NSString stringWithFormat:@"%ld:%02ld", trackLength / 60, trackLength % 60];
 }
 
 - (IBAction)closeButtonTouched:(id)sender {

@@ -21,6 +21,8 @@
     
     // Initialize Feed.fm library
     FMLogSetLevel(FMLogLevelDebug);
+//    [FMAudioPlayer setClientToken:@"counting"
+//                           secret:@"counting"];
     [FMAudioPlayer setClientToken:@"repeat"
                            secret:@"repeat"];
     [[FMAudioPlayer sharedPlayer] setPlacement:@"11275"];

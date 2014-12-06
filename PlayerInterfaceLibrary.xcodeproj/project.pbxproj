@@ -40,9 +40,6 @@
 		E37FF43F1A312DE9009B1200 /* volume-medium.png in Resources */ = {isa = PBXBuildFile; fileRef = E37FF4341A312DE9009B1200 /* volume-medium.png */; };
 		E37FF4401A312DE9009B1200 /* volume-mute.png in Resources */ = {isa = PBXBuildFile; fileRef = E37FF4351A312DE9009B1200 /* volume-mute.png */; };
 		E3A293A31A328CF300629AC0 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A293A21A328CF300629AC0 /* slider.png */; };
-		E3A293A51A32918B00629AC0 /* volume_control.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A293A41A32918B00629AC0 /* volume_control.png */; };
-		E3A293AB1A32948100629AC0 /* volume-control.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A293AA1A32948100629AC0 /* volume-control.png */; };
-		E3A293AF1A32981500629AC0 /* volume-control-square.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A293AE1A32981500629AC0 /* volume-control-square.png */; };
 		E3A293B51A32994800629AC0 /* volume-control-wide.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A293B41A32994800629AC0 /* volume-control-wide.png */; };
 		E3E2EA0D1A302A03001014EE /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E2EA0B1A302A03001014EE /* PlayerViewController.m */; };
 		E3E2EA0E1A302A03001014EE /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E2EA0C1A302A03001014EE /* PlayerViewController.xib */; };
@@ -115,9 +112,6 @@
 		E37FF4341A312DE9009B1200 /* volume-medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-medium.png"; sourceTree = "<group>"; };
 		E37FF4351A312DE9009B1200 /* volume-mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-mute.png"; sourceTree = "<group>"; };
 		E3A293A21A328CF300629AC0 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
-		E3A293A41A32918B00629AC0 /* volume_control.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = volume_control.png; sourceTree = "<group>"; };
-		E3A293AA1A32948100629AC0 /* volume-control.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-control.png"; sourceTree = "<group>"; };
-		E3A293AE1A32981500629AC0 /* volume-control-square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-control-square.png"; sourceTree = "<group>"; };
 		E3A293B41A32994800629AC0 /* volume-control-wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-control-wide.png"; sourceTree = "<group>"; };
 		E3E2EA0A1A302A03001014EE /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerViewController.h; path = Player/PlayerViewController.h; sourceTree = "<group>"; };
 		E3E2EA0B1A302A03001014EE /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerViewController.m; path = Player/PlayerViewController.m; sourceTree = "<group>"; };
@@ -214,14 +208,12 @@
 		E34B9C6E1A30DE640032AAE7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E3A293A41A32918B00629AC0 /* volume_control.png */,
 				E3A293A21A328CF300629AC0 /* slider.png */,
 				E37FF42B1A312DE9009B1200 /* close.png */,
 				E37FF42C1A312DE9009B1200 /* pause.png */,
 				E37FF42D1A312DE9009B1200 /* play.png */,
 				E37FF42E1A312DE9009B1200 /* share.png */,
 				E37FF42F1A312DE9009B1200 /* skip.png */,
-				E3A293AA1A32948100629AC0 /* volume-control.png */,
 				E37FF4301A312DE9009B1200 /* thumbsdown.png */,
 				E37FF4311A312DE9009B1200 /* thumbsup.png */,
 				E37FF4321A312DE9009B1200 /* volume-high.png */,
@@ -230,7 +222,6 @@
 				E37FF4351A312DE9009B1200 /* volume-mute.png */,
 				E37FF4131A312D07009B1200 /* test.png */,
 				E34B9C771A30F43C0032AAE7 /* Lato-Regular.ttf */,
-				E3A293AE1A32981500629AC0 /* volume-control-square.png */,
 				E34B9C6F1A30E4B90032AAE7 /* background.png */,
 				E3A293B41A32994800629AC0 /* volume-control-wide.png */,
 			);
@@ -383,7 +374,6 @@
 				E37FF4371A312DE9009B1200 /* pause.png in Resources */,
 				E37FF43B1A312DE9009B1200 /* thumbsdown.png in Resources */,
 				E34B9C781A30F43C0032AAE7 /* Lato-Regular.ttf in Resources */,
-				E3A293A51A32918B00629AC0 /* volume_control.png in Resources */,
 				E37FF43F1A312DE9009B1200 /* volume-medium.png in Resources */,
 				E37FF4141A312D07009B1200 /* test.png in Resources */,
 				E37FF43C1A312DE9009B1200 /* thumbsup.png in Resources */,
@@ -394,10 +384,8 @@
 				E37FF4391A312DE9009B1200 /* share.png in Resources */,
 				E37FF43D1A312DE9009B1200 /* volume-high.png in Resources */,
 				E3E2EA0E1A302A03001014EE /* PlayerViewController.xib in Resources */,
-				E3A293AF1A32981500629AC0 /* volume-control-square.png in Resources */,
 				E34B9C6A1A30CC980032AAE7 /* BigPlayerViewController.xib in Resources */,
 				E3A293B51A32994800629AC0 /* volume-control-wide.png in Resources */,
-				E3A293AB1A32948100629AC0 /* volume-control.png in Resources */,
 				E37FF43E1A312DE9009B1200 /* volume-low.png in Resources */,
 				E37FF43A1A312DE9009B1200 /* skip.png in Resources */,
 				E3E2EA3C1A302EF6001014EE /* Default-568h@2x.png in Resources */,
