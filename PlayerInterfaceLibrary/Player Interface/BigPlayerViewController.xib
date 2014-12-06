@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -73,7 +74,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws2-RZ-1Fq">
-                            <rect key="frame" x="10" y="147" width="19" height="21"/>
+                            <rect key="frame" x="7" y="147" width="19" height="21"/>
                             <state key="normal" backgroundImage="thumbsdown.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -82,7 +83,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoL-dG-Nik">
-                            <rect key="frame" x="80" y="147" width="19" height="21"/>
+                            <rect key="frame" x="87" y="147" width="19" height="21"/>
                             <state key="normal" backgroundImage="thumbsup.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -91,7 +92,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiP-gE-Nco">
-                            <rect key="frame" x="238" y="147" width="30" height="21"/>
+                            <rect key="frame" x="242" y="147" width="30" height="21"/>
                             <state key="normal" backgroundImage="skip.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -100,7 +101,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-A7-yKk">
-                            <rect key="frame" x="9" y="189" width="31" height="21"/>
+                            <rect key="frame" x="7" y="189" width="31" height="21"/>
                             <state key="normal" image="volume-high.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -109,7 +110,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-cX-IMa">
-                            <rect key="frame" x="161" y="147" width="28" height="21"/>
+                            <rect key="frame" x="165" y="147" width="28" height="21"/>
                             <color key="backgroundColor" red="0.69197487602412389" green="0.27570295227366337" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             <state key="normal" image="play.png">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -118,30 +119,30 @@
                                 <action selector="playButtonTouched:" destination="-1" eventType="touchUpInside" id="4n9-qi-qpu"/>
                             </connections>
                         </button>
-                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="210" placeholderIntrinsicHeight="20" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-P9-Jrq">
-                            <rect key="frame" x="53" y="185" width="214" height="31"/>
-                            <color key="tintColor" red="0.75157828282828287" green="0.75157828282828287" blue="0.75157828282828287" alpha="1" colorSpace="calibratedRGB"/>
+                        <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-P9-Jrq">
+                            <rect key="frame" x="44" y="191" width="228" height="31"/>
+                            <color key="tintColor" red="0.61959438131313127" green="0.61959438131313127" blue="0.61959438131313127" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="thumbTintColor" red="0.0" green="0.82914668748637599" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="volumeSliderValueChanged:" destination="-1" eventType="valueChanged" id="CdJ-EU-JuF"/>
                             </connections>
                         </slider>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-:--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRk-hz-wa3">
-                            <rect key="frame" x="4" y="109" width="34" height="21"/>
+                            <rect key="frame" x="7" y="109" width="34" height="21"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-a2-0XA">
-                            <rect key="frame" x="41" y="119" width="198" height="2"/>
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        </progressView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-:--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZJ-7z-XIf">
                             <rect key="frame" x="246" y="109" width="34" height="21"/>
                             <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-a2-0XA">
+                            <rect key="frame" x="46" y="119" width="187" height="2"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </progressView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>

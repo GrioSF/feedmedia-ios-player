@@ -59,7 +59,7 @@
     [self updateTrackInfo];
     
     // Change default slider appearance
-    UIImage *thumbImage = [UIImage imageNamed:@"slider"];
+    UIImage *thumbImage = [UIImage imageNamed:@"volume-control-wide"];
     [[UISlider appearance] setThumbImage:thumbImage forState:UIControlStateNormal];
     [[UISlider appearance] setThumbImage:thumbImage forState:UIControlStateHighlighted];
 
@@ -73,8 +73,12 @@
     
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerActiveStationDidChangeNotification object:self.audioPlayer];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerCurrentItemDidChangeNotification object:self.audioPlayer];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerPlaybackStateDidChangeNotification object:self.audioPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(testMethod) name:FMAudioPlayerPlaybackStateDidChangeNotification object:self.audioPlayer];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerSkipFailedNotification object:self.audioPlayer];
+}
+
+- (void)testMethod {
+    
 }
 
 - (IBAction)playButtonTouched:(id)sender {
