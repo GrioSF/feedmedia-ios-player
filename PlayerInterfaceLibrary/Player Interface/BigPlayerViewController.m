@@ -52,37 +52,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Update current status
-    [self updateVolume:self.audioPlayer.mixVolume];
-    [self updatePlayButton];
-    [self updatePlayingInfo];
-    [self updateTrackInfo];
+    
+    // Update player state
+    [self updatePlayer];
     
     // Change default slider appearance
     UIImage *thumbImage = [UIImage imageNamed:@"volume-control-wide"];
     [[UISlider appearance] setThumbImage:thumbImage forState:UIControlStateNormal];
     [[UISlider appearance] setThumbImage:thumbImage forState:UIControlStateHighlighted];
 
-    
+    // Add timer to update playing info
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
                                    selector:@selector(updatePlayingInfo)
                                    userInfo:nil
                                     repeats:YES];
     
-    
+    // Add notifications
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerActiveStationDidChangeNotification object:self.audioPlayer];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerCurrentItemDidChangeNotification object:self.audioPlayer];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(testMethod) name:FMAudioPlayerPlaybackStateDidChangeNotification object:self.audioPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePlayer) name:FMAudioPlayerCurrentItemDidChangeNotification object:self.audioPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePlayer) name:FMAudioPlayerPlaybackStateDidChangeNotification object:self.audioPlayer];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerSkipFailedNotification object:self.audioPlayer];
 }
+
 
 - (void)testMethod {
     
 }
 
 - (IBAction)playButtonTouched:(id)sender {
-    [self updatePlayButton];
     switch(self.audioPlayer.playbackState) {
         case FMAudioPlayerPlaybackStatePlaying:
             [self.audioPlayer pause];
@@ -91,7 +89,7 @@
             [self.audioPlayer play];
             break;
     }
-    [self updateTrackInfo];
+    [self updatePlayer];
 }
 
 
@@ -140,14 +138,51 @@
     self.timeElapsedLabel.text = [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60];
 }
 
-- (void) updatePlayButton {
+- (void)updatePlayer {
+    [self updateVolume:self.audioPlayer.mixVolume];
+    [self updatePlayingInfo];
+    [self updateTrackInfo];
+    
+    
     switch(self.audioPlayer.playbackState) {
         case FMAudioPlayerPlaybackStatePlaying:
+            [self.playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
+            self.skipButton.alpha = 1;
+            self.playButton.alpha = 1;
+            break;
+        case FMAudioPlayerPlaybackStateWaitingForItem:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+            self.playButton.alpha = 0.25;
+            self.skipButton.alpha = 0.25;
+            break;
+        case FMAudioPlayerPlaybackStateReadyToPlay:
+            [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+            self.skipButton.alpha = 1;
+            self.playButton.alpha = 1;
+            break;
+        case FMAudioPlayerPlaybackStatePaused:
+            [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+            self.skipButton.alpha = 1;
+            self.playButton.alpha = 1;
+            break;
+        case FMAudioPlayerPlaybackStateStalled:
+            [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+            self.playButton.alpha = 0.25;
+            self.skipButton.alpha = 0.25;
+            break;
+        case FMAudioPlayerPlaybackStateRequestingSkip:
+            [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+            self.playButton.alpha = 1;
+            self.skipButton.alpha = 0.25;
+            break;
+        case FMAudioPlayerPlaybackStateComplete:
+            [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+            self.playButton.alpha = 0.25;
+            self.skipButton.alpha = 1;
             break;
         default:
-            [self.playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
             break;
+            
     }
 }
 

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlayerInterfaceLibrary/Player Interface/BigPlayerViewController.m"
-            timestampString = "439521554.472317"
+            timestampString = "439596768.719907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "-volumeButtonTouched:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,27 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlayerInterfaceLibrary/Player Interface/BigPlayerViewController.m"
-            timestampString = "439521554.472317"
+            timestampString = "439597373.680699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-playButtonTouched:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlayerInterfaceLibrary/Player Interface/BigPlayerViewController.m"
-            timestampString = "439521554.472317"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
             landmarkName = "-updateTrackInfo"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlayerInterfaceLibrary/Player Interface/BigPlayerViewController.m"
-            timestampString = "439521554.472317"
+            timestampString = "439597373.680699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "-updateTrackInfo"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlayerInterfaceLibrary/Player Interface/BigPlayerViewController.m"
-            timestampString = "439503080.963135"
+            timestampString = "439594431.177433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -90,27 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlayerInterfaceLibrary/Player Interface/BigPlayerViewController.m"
-            timestampString = "439521554.472317"
+            timestampString = "439596768.719907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
-            landmarkName = "-playButtonTouched:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PlayerInterfaceLibrary/Player Interface/BigPlayerViewController.m"
-            timestampString = "439521554.472317"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "-volumeButtonTouched:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PlayerInterfaceLibrary/Player Interface/BigPlayerViewController.m"
-            timestampString = "439521550.521333"
+            timestampString = "439596768.719907"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "-testMethod"
             landmarkType = "5">
          </BreakpointContent>
