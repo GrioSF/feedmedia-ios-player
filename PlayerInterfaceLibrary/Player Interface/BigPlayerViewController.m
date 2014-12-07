@@ -14,6 +14,7 @@
 @interface BigPlayerViewController ()
 @property (strong, nonatomic) FMAudioPlayer *audioPlayer;
 @property (strong, nonatomic) FMAudioItem *audioItem;
+@property (strong, nonatomic) NSUserDefaults *userDefaults;
 
 @property (nonatomic) BOOL isMute;
 
@@ -37,7 +38,6 @@
 - (IBAction)volumeSliderValueChanged:(id)sender;
 - (IBAction)closeButtonTouched:(id)sender;
 
-
 @end
 
 @implementation BigPlayerViewController
@@ -46,6 +46,7 @@
     if (self = [super initWithNibName:nibName bundle:nibBundle]) {
         _audioPlayer = [FMAudioPlayer sharedPlayer];
         _isMute = NO;
+        _userDefaults = [NSUserDefaults standardUserDefaults];
     }
     return self;
 }
@@ -55,6 +56,9 @@
     
     // Update player state
     [self updatePlayer];
+    if (self.audioPlayer.playbackState == FMAudioPlayerPlaybackStateComplete) {
+        [self.audioPlayer play];
+    }
     
     // Change default slider appearance
     UIImage *thumbImage = [UIImage imageNamed:@"volume-control-wide"];
@@ -69,7 +73,16 @@
                                     repeats:YES];
     
     // Add notifications
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePlayer) name:FMAudioPlayerPlaybackStateDidChangeNotification object:self.audioPlayer];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updatePlayer)
+                                                 name:FMAudioPlayerPlaybackStateDidChangeNotification
+                                               object:self.audioPlayer];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:FMAudioPlayerPlaybackStateDidChangeNotification
+                                                  object:self.audioPlayer];
 }
 
 # pragma mark - controls
@@ -117,14 +130,14 @@
 
 - (void)muteVolume {
     if (self.volumeSlider.value != 0) {
-        [[NSUserDefaults standardUserDefaults] setFloat:self.volumeSlider.value forKey:@"previousVolumeValue"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self.userDefaults setFloat:self.volumeSlider.value forKey:@"previousVolumeValue"];
+        [self.userDefaults synchronize];
     }
     [self updateVolume:0];
 }
 
 - (void)unMuteVolume {
-    float previousVolumeValue = [[NSUserDefaults standardUserDefaults] floatForKey:@"previousVolumeValue"];
+    float previousVolumeValue = [self.userDefaults floatForKey:@"previousVolumeValue"];
     [self updateVolume:previousVolumeValue];
 }
 
@@ -274,21 +287,21 @@
 }
 
 - (BOOL)isItemLiked {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"isItemLiked"];
+    return [self.userDefaults boolForKey:@"isItemLiked"];
 }
 
 - (void)setItemLiked:(BOOL)value {
-    [[NSUserDefaults standardUserDefaults] setBool:value forKey:@"isItemLiked"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.userDefaults setBool:value forKey:@"isItemLiked"];
+    [self.userDefaults synchronize];
 }
 
 - (BOOL)isItemDisliked {
-    return [[NSUserDefaults standardUserDefaults] boolForKey:@"isItemDisliked"];
+    return [self.userDefaults boolForKey:@"isItemDisliked"];
 }
 
 - (void)setItemDisliked:(BOOL)value {
-    [[NSUserDefaults standardUserDefaults] setBool:value forKey:@"isItemDisliked"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.userDefaults setBool:value forKey:@"isItemDisliked"];
+    [self.userDefaults synchronize];
 }
 
 # pragma mark - helper methods
