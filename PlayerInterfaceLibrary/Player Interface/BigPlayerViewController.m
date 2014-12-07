@@ -102,9 +102,11 @@
 }
 
 - (IBAction)thumbsUpButtonTouched:(id)sender {
+    [self.audioPlayer like];
 }
 
 - (IBAction)thumbsDownButtonTouched:(id)sender {
+    [self.audioPlayer dislike];
 }
 
 - (IBAction)volumeButtonTouched:(id)sender {

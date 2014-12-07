@@ -101,4 +101,9 @@ extern NSString *const FMAudioFormatAAC;
   */
 - (void)rejectItem:(FMAudioItem *)item;
 
+// TODO: Write Documentation
+- (void)requestLike;
+- (void)requestUnlike;
+- (void)requestDislike;
+
 @end

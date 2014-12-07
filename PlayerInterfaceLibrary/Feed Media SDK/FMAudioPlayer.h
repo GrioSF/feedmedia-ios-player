@@ -93,5 +93,10 @@ typedef enum FMAudioPlayerPlaybackState : NSUInteger {
 @property (nonatomic) NSInteger maxBitrate;
 
 
+// TODO: Write documentation
+- (void)like;
+- (void)dislike;
+- (void)unlike;
+
 
 @end
