@@ -101,7 +101,9 @@ extern NSString *const FMAudioFormatAAC;
   */
 - (void)rejectItem:(FMAudioItem *)item;
 
-// TODO: Write Documentation
+/**
+ Register a like/unlike request or a dislike request for the current content.
+  */
 - (void)requestLike;
 - (void)requestUnlike;
 - (void)requestDislike;
