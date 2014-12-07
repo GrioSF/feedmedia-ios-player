@@ -21,11 +21,11 @@
     
     // Initialize Feed.fm library
     FMLogSetLevel(FMLogLevelDebug);
-//    [FMAudioPlayer setClientToken:@"counting"
-//                           secret:@"counting"];
-    [FMAudioPlayer setClientToken:@"repeat"
-                           secret:@"repeat"];
-    [[FMAudioPlayer sharedPlayer] setPlacement:@"11275"];
+    [FMAudioPlayer setClientToken:@"f98cd99d4e6d868800aadfbe5235073e9568f128"
+                           secret:@"74644d34e08704481c18d481d9b0b2d8316e8fde"];
+//    [FMAudioPlayer setClientToken:@"repeat"
+//                           secret:@"repeat"];
+    [[FMAudioPlayer sharedPlayer] setPlacement:@"11298"];
 
     // Initialize the app
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

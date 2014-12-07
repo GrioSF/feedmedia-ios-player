@@ -162,14 +162,14 @@
             self.timeElapsedLabel.text = @"-:--";
             self.totalTimeLabel.text = @"-:--";
             self.progressIndicator.hidden = NO;
+            [self resetLikeDislikeAppearance];
             break;
         case FMAudioPlayerPlaybackStateReadyToPlay:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.skipButton.alpha = 1;
             self.playButton.alpha = 1;
             self.progressIndicator.hidden = NO;
-            [self setItemLiked:NO];
-            [self setItemDisliked:NO];
+            [self resetLikeDislikeAppearance];
             break;
         case FMAudioPlayerPlaybackStatePaused:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
@@ -202,7 +202,6 @@
             break;
         default:
             break;
-            
     }
     [self updateLikeButtons];
 }
@@ -248,6 +247,13 @@
 }
 
 # pragma mark - like and dislike
+
+- (void)resetLikeDislikeAppearance {
+    [self setItemLiked:NO];
+    [self setItemDisliked:NO];
+    self.thumbsUpButton.alpha = 0.25;
+    self.thumbsDownButton.alpha = 0.25;
+}
 
 - (void)updateLikeButtons {
     if ([self isItemLiked]) {
