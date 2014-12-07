@@ -69,16 +69,10 @@
                                     repeats:YES];
     
     // Add notifications
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerActiveStationDidChangeNotification object:self.audioPlayer];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePlayer) name:FMAudioPlayerCurrentItemDidChangeNotification object:self.audioPlayer];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePlayer) name:FMAudioPlayerPlaybackStateDidChangeNotification object:self.audioPlayer];
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateTrackInfo) name:FMAudioPlayerSkipFailedNotification object:self.audioPlayer];
 }
 
-
-- (void)testMethod {
-    
-}
+# pragma mark - controls
 
 - (IBAction)playButtonTouched:(id)sender {
     switch(self.audioPlayer.playbackState) {
@@ -102,8 +96,6 @@
 }
 
 
-
-
 - (IBAction)volumeButtonTouched:(id)sender {
     if (self.isMute) {
         [self unMuteVolume];
@@ -112,6 +104,15 @@
         [self muteVolume];
         self.isMute = YES;
     }
+}
+
+- (IBAction)volumeSliderValueChanged:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    [self updateVolume:slider.value];
+}
+
+- (IBAction)closeButtonTouched:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 - (void)muteVolume {
@@ -127,24 +128,7 @@
     [self updateVolume:previousVolumeValue];
 }
 
-- (IBAction)volumeSliderValueChanged:(id)sender {
-    UISlider *slider = (UISlider *)sender;
-    [self updateVolume:slider.value];
-}
-
-- (void)updatePlayingInfo {
-    float progress = self.audioPlayer.currentPlaybackTime / self.audioPlayer.currentItemDuration;
-    self.progressIndicator.progress = progress;
-    long currentTime = lroundf(self.audioPlayer.currentPlaybackTime);
-    self.timeElapsedLabel.text = [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60];
-    long trackLength = lroundf(self.audioItem.duration);
-    self.totalTimeLabel.text = [NSString stringWithFormat:@"%ld:%02ld", trackLength / 60, trackLength % 60];
-    if ((self.audioPlayer.playbackState == FMAudioPlayerPlaybackStateComplete)) {
-        self.timeElapsedLabel.text = @"";
-        self.totalTimeLabel.text = @"";
-    }
-}
-
+# pragma mark - player info
 
 - (void)updatePlayer {
     [self updateVolume:self.audioPlayer.mixVolume];
@@ -210,7 +194,21 @@
     [self updateLikeButtons];
 }
 
-
+- (void)updatePlayingInfo {
+    float progress = self.audioPlayer.currentPlaybackTime / self.audioPlayer.currentItemDuration;
+    self.progressIndicator.progress = progress;
+    long currentTime = lroundf(self.audioPlayer.currentPlaybackTime);
+    self.timeElapsedLabel.text = [NSString stringWithFormat:@"%ld:%02ld", currentTime / 60, currentTime % 60];
+    if (currentTime < 0) {
+        self.timeElapsedLabel.text = @"-:--";
+    }
+    long trackLength = lroundf(self.audioItem.duration);
+    self.totalTimeLabel.text = [NSString stringWithFormat:@"%ld:%02ld", trackLength / 60, trackLength % 60];
+    if ((self.audioPlayer.playbackState == FMAudioPlayerPlaybackStateComplete)) {
+        self.timeElapsedLabel.text = @"";
+        self.totalTimeLabel.text = @"";
+    }
+}
 
 - (void)updateVolume:(float)volumeValue {
     self.volumeSlider.value = volumeValue;
@@ -234,14 +232,6 @@
     self.artistLabel.text = self.audioItem.artist;
     self.titleLabel.text = self.audioItem.name;
     self.albumLabel.text = self.audioItem.album;
-}
-
-- (IBAction)closeButtonTouched:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return YES;
 }
 
 # pragma mark - like and dislike
@@ -299,6 +289,12 @@
 - (void)setItemDisliked:(BOOL)value {
     [[NSUserDefaults standardUserDefaults] setBool:value forKey:@"isItemDisliked"];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+# pragma mark - helper methods
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end
