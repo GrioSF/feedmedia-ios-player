@@ -101,13 +101,8 @@
     [self.audioPlayer skip];
 }
 
-- (IBAction)thumbsUpButtonTouched:(id)sender {
-    [self.audioPlayer like];
-}
 
-- (IBAction)thumbsDownButtonTouched:(id)sender {
-    [self.audioPlayer dislike];
-}
+
 
 - (IBAction)volumeButtonTouched:(id)sender {
     if (self.isMute) {
@@ -176,6 +171,8 @@
             self.skipButton.alpha = 1;
             self.playButton.alpha = 1;
             self.progressIndicator.hidden = NO;
+            [self setItemLiked:NO];
+            [self setItemDisliked:NO];
             break;
         case FMAudioPlayerPlaybackStatePaused:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
@@ -204,15 +201,16 @@
             self.timeElapsedLabel.text = @"";
             self.totalTimeLabel.text = @"";
             self.progressIndicator.hidden = YES;
-            self.thumbsDownButton.alpha = 0.25;
-            self.thumbsUpButton.alpha = 0.25;
             self.skipButton.alpha = 0.25;
             break;
         default:
             break;
             
     }
+    [self updateLikeButtons];
 }
+
+
 
 - (void)updateVolume:(float)volumeValue {
     self.volumeSlider.value = volumeValue;
@@ -244,6 +242,63 @@
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+# pragma mark - like and dislike
+
+- (void)updateLikeButtons {
+    if ([self isItemLiked]) {
+        self.thumbsUpButton.alpha = 1;
+    } else {
+        self.thumbsUpButton.alpha = 0.25;
+    }
+    if ([self isItemDisliked]) {
+        self.thumbsDownButton.alpha = 1;
+    } else {
+        self.thumbsDownButton.alpha = 0.25;
+    }
+}
+
+- (IBAction)thumbsUpButtonTouched:(id)sender {
+    if ([self isItemLiked]){
+        [self.audioPlayer unlike];
+        [self setItemLiked:NO];
+    } else {
+        [self.audioPlayer like];
+        [self setItemLiked:YES];
+        [self setItemDisliked:NO];
+    }
+    [self updateLikeButtons];
+}
+
+- (IBAction)thumbsDownButtonTouched:(id)sender {
+    if ([self isItemDisliked]){
+        [self.audioPlayer unDislike];
+        [self setItemDisliked: NO];
+    } else {
+        [self.audioPlayer dislike];
+        [self setItemDisliked:YES];
+        [self setItemLiked:NO];
+    }
+    [self updateLikeButtons];
+}
+
+- (BOOL)isItemLiked {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"isItemLiked"];
+}
+
+- (void)setItemLiked:(BOOL)value {
+    [[NSUserDefaults standardUserDefaults] setBool:value forKey:@"isItemLiked"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (BOOL)isItemDisliked {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:@"isItemDisliked"];
+}
+
+- (void)setItemDisliked:(BOOL)value {
+    [[NSUserDefaults standardUserDefaults] setBool:value forKey:@"isItemDisliked"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 @end

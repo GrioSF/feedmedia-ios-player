@@ -97,6 +97,6 @@ typedef enum FMAudioPlayerPlaybackState : NSUInteger {
 - (void)like;
 - (void)dislike;
 - (void)unlike;
-
+- (void)unDislike;
 
 @end

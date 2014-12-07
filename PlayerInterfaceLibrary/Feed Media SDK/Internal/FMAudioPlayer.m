@@ -553,6 +553,11 @@ NSString *const FMAudioPlayerSkipFailureErrorKey = @"FMAudioPlayerSkipFailureErr
     [self.session requestUnlike];
 }
 
+- (void)unDislike {
+    FMLogDebug(@"UnDislike Called / request not implemented, yet");
+    // TODO: Implement UnDislike request
+}
+
 @end
 
 #undef kStatusKey
