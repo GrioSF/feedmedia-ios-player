@@ -19,14 +19,14 @@
 		E34B9C611A302FB80032AAE7 /* FMReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E34B9C551A302FB80032AAE7 /* FMReachability.m */; };
 		E34B9C621A302FB80032AAE7 /* FMSession.m in Sources */ = {isa = PBXBuildFile; fileRef = E34B9C561A302FB80032AAE7 /* FMSession.m */; };
 		E34B9C631A302FB80032AAE7 /* FMStation.m in Sources */ = {isa = PBXBuildFile; fileRef = E34B9C571A302FB80032AAE7 /* FMStation.m */; };
-		E34B9C691A30CC980032AAE7 /* BigPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E34B9C671A30CC980032AAE7 /* BigPlayerViewController.m */; };
-		E34B9C6A1A30CC980032AAE7 /* BigPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E34B9C681A30CC980032AAE7 /* BigPlayerViewController.xib */; };
+		E34B9C691A30CC980032AAE7 /* FMPlayerBigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E34B9C671A30CC980032AAE7 /* FMPlayerBigViewController.m */; };
+		E34B9C6A1A30CC980032AAE7 /* FMPlayerBigViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E34B9C681A30CC980032AAE7 /* FMPlayerBigViewController.xib */; };
 		E362CF271A3024AB0013A8CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E362CF261A3024AB0013A8CD /* main.m */; };
 		E362CF2A1A3024AB0013A8CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E362CF291A3024AB0013A8CD /* AppDelegate.m */; };
 		E362CF321A3024AB0013A8CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E362CF311A3024AB0013A8CD /* Images.xcassets */; };
 		E362CF411A3024AB0013A8CD /* PlayerInterfaceLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E362CF401A3024AB0013A8CD /* PlayerInterfaceLibraryTests.m */; };
-		E3D1619F1A353FC6007AE212 /* SmallPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1619D1A353FC6007AE212 /* SmallPlayerViewController.m */; };
-		E3D161A01A353FC6007AE212 /* SmallPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D1619E1A353FC6007AE212 /* SmallPlayerViewController.xib */; };
+		E3D1619F1A353FC6007AE212 /* FMPlayerSmallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1619D1A353FC6007AE212 /* FMPlayerSmallViewController.m */; };
+		E3D161A01A353FC6007AE212 /* FMPlayerSmallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D1619E1A353FC6007AE212 /* FMPlayerSmallViewController.xib */; };
 		E3D161B41A355F5E007AE212 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E3D161A41A355F5E007AE212 /* background.png */; };
 		E3D161B51A355F5E007AE212 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = E3D161A51A355F5E007AE212 /* close.png */; };
 		E3D161B61A355F5E007AE212 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = E3D161A61A355F5E007AE212 /* pause.png */; };
@@ -87,9 +87,9 @@
 		E34B9C561A302FB80032AAE7 /* FMSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSession.m; sourceTree = "<group>"; };
 		E34B9C571A302FB80032AAE7 /* FMStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStation.m; sourceTree = "<group>"; };
 		E34B9C641A3031000032AAE7 /* playerInterface-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "playerInterface-Prefix.pch"; sourceTree = "<group>"; };
-		E34B9C661A30CC980032AAE7 /* BigPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BigPlayerViewController.h; path = "Player Interface/BigPlayerViewController.h"; sourceTree = "<group>"; };
-		E34B9C671A30CC980032AAE7 /* BigPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BigPlayerViewController.m; path = "Player Interface/BigPlayerViewController.m"; sourceTree = "<group>"; };
-		E34B9C681A30CC980032AAE7 /* BigPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BigPlayerViewController.xib; path = "Player Interface/BigPlayerViewController.xib"; sourceTree = "<group>"; };
+		E34B9C661A30CC980032AAE7 /* FMPlayerBigViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMPlayerBigViewController.h; path = "Player Interface/FMPlayerBigViewController.h"; sourceTree = "<group>"; };
+		E34B9C671A30CC980032AAE7 /* FMPlayerBigViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMPlayerBigViewController.m; path = "Player Interface/FMPlayerBigViewController.m"; sourceTree = "<group>"; };
+		E34B9C681A30CC980032AAE7 /* FMPlayerBigViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FMPlayerBigViewController.xib; path = "Player Interface/FMPlayerBigViewController.xib"; sourceTree = "<group>"; };
 		E362CF211A3024AB0013A8CD /* PlayerInterfaceLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayerInterfaceLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E362CF251A3024AB0013A8CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E362CF261A3024AB0013A8CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,9 +99,9 @@
 		E362CF3A1A3024AB0013A8CD /* PlayerInterfaceLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerInterfaceLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E362CF3F1A3024AB0013A8CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E362CF401A3024AB0013A8CD /* PlayerInterfaceLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerInterfaceLibraryTests.m; sourceTree = "<group>"; };
-		E3D1619C1A353FC6007AE212 /* SmallPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmallPlayerViewController.h; path = "Player Interface/SmallPlayerViewController.h"; sourceTree = "<group>"; };
-		E3D1619D1A353FC6007AE212 /* SmallPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmallPlayerViewController.m; path = "Player Interface/SmallPlayerViewController.m"; sourceTree = "<group>"; };
-		E3D1619E1A353FC6007AE212 /* SmallPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SmallPlayerViewController.xib; path = "Player Interface/SmallPlayerViewController.xib"; sourceTree = "<group>"; };
+		E3D1619C1A353FC6007AE212 /* FMPlayerSmallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMPlayerSmallViewController.h; path = "Player Interface/FMPlayerSmallViewController.h"; sourceTree = "<group>"; };
+		E3D1619D1A353FC6007AE212 /* FMPlayerSmallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMPlayerSmallViewController.m; path = "Player Interface/FMPlayerSmallViewController.m"; sourceTree = "<group>"; };
+		E3D1619E1A353FC6007AE212 /* FMPlayerSmallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FMPlayerSmallViewController.xib; path = "Player Interface/FMPlayerSmallViewController.xib"; sourceTree = "<group>"; };
 		E3D161A41A355F5E007AE212 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = "Player Interface/assets/background.png"; sourceTree = "<group>"; };
 		E3D161A51A355F5E007AE212 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = "Player Interface/assets/close.png"; sourceTree = "<group>"; };
 		E3D161A61A355F5E007AE212 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = "Player Interface/assets/pause.png"; sourceTree = "<group>"; };
@@ -191,12 +191,12 @@
 			isa = PBXGroup;
 			children = (
 				E34B9C6E1A30DE640032AAE7 /* Assets */,
-				E34B9C661A30CC980032AAE7 /* BigPlayerViewController.h */,
-				E34B9C671A30CC980032AAE7 /* BigPlayerViewController.m */,
-				E34B9C681A30CC980032AAE7 /* BigPlayerViewController.xib */,
-				E3D1619C1A353FC6007AE212 /* SmallPlayerViewController.h */,
-				E3D1619D1A353FC6007AE212 /* SmallPlayerViewController.m */,
-				E3D1619E1A353FC6007AE212 /* SmallPlayerViewController.xib */,
+				E34B9C661A30CC980032AAE7 /* FMPlayerBigViewController.h */,
+				E34B9C671A30CC980032AAE7 /* FMPlayerBigViewController.m */,
+				E34B9C681A30CC980032AAE7 /* FMPlayerBigViewController.xib */,
+				E3D1619C1A353FC6007AE212 /* FMPlayerSmallViewController.h */,
+				E3D1619D1A353FC6007AE212 /* FMPlayerSmallViewController.m */,
+				E3D1619E1A353FC6007AE212 /* FMPlayerSmallViewController.xib */,
 			);
 			name = "Player Interface";
 			sourceTree = "<group>";
@@ -390,11 +390,11 @@
 				E3D161BB1A355F5E007AE212 /* test.png in Resources */,
 				E3D161BE1A355F5E007AE212 /* volume-control-wide.png in Resources */,
 				E3D161B61A355F5E007AE212 /* pause.png in Resources */,
-				E34B9C6A1A30CC980032AAE7 /* BigPlayerViewController.xib in Resources */,
+				E34B9C6A1A30CC980032AAE7 /* FMPlayerBigViewController.xib in Resources */,
 				E3D161B51A355F5E007AE212 /* close.png in Resources */,
 				E3D161C21A355F5E007AE212 /* volume-mute.png in Resources */,
 				E3D161B81A355F5E007AE212 /* share.png in Resources */,
-				E3D161A01A353FC6007AE212 /* SmallPlayerViewController.xib in Resources */,
+				E3D161A01A353FC6007AE212 /* FMPlayerSmallViewController.xib in Resources */,
 				E3D161BC1A355F5E007AE212 /* thumbsdown.png in Resources */,
 				E3D161BD1A355F5E007AE212 /* thumbsup.png in Resources */,
 				E3E2EA3C1A302EF6001014EE /* Default-568h@2x.png in Resources */,
@@ -417,7 +417,7 @@
 			files = (
 				E34B9C5C1A302FB80032AAE7 /* FMAuth.m in Sources */,
 				E34B9C621A302FB80032AAE7 /* FMSession.m in Sources */,
-				E34B9C691A30CC980032AAE7 /* BigPlayerViewController.m in Sources */,
+				E34B9C691A30CC980032AAE7 /* FMPlayerBigViewController.m in Sources */,
 				E34B9C5E1A302FB80032AAE7 /* FMBase64.m in Sources */,
 				E34B9C5B1A302FB80032AAE7 /* FMAudioPlayer.m in Sources */,
 				E34B9C601A302FB80032AAE7 /* FMLog.m in Sources */,
@@ -427,7 +427,7 @@
 				E34B9C631A302FB80032AAE7 /* FMStation.m in Sources */,
 				E34B9C591A302FB80032AAE7 /* FMAsset.m in Sources */,
 				E34B9C5F1A302FB80032AAE7 /* FMError.m in Sources */,
-				E3D1619F1A353FC6007AE212 /* SmallPlayerViewController.m in Sources */,
+				E3D1619F1A353FC6007AE212 /* FMPlayerSmallViewController.m in Sources */,
 				E34B9C5A1A302FB80032AAE7 /* FMAudioItem.m in Sources */,
 				E362CF271A3024AB0013A8CD /* main.m in Sources */,
 				E34B9C581A302FB80032AAE7 /* FMAPIRequest.m in Sources */,

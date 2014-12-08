@@ -1,5 +1,5 @@
 //
-//  BigPlayerViewController.h
+//  FMPlayerBigViewController.h
 //  PlayerInterfaceLibrary
 //
 //  Created by Giuseppe Barbalinardo on 12/4/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BigPlayerViewController : UIViewController
+@interface FMPlayerBigViewController : UIViewController
 
 @end

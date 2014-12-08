@@ -7,8 +7,8 @@
 //
 
 #import "PlayerViewController.h"
-#import "BigPlayerViewController.h"
-#import "SmallPlayerViewController.h"
+#import "FMPlayerBigViewController.h"
+#import "FMPlayerSmallViewController.h"
 
 @interface PlayerViewController ()
 - (IBAction)showWebRadio:(id)sender;
@@ -22,7 +22,7 @@
 }
 
 - (IBAction)showWebRadio:(id)sender {
-    SmallPlayerViewController *vc = [SmallPlayerViewController new];
+    FMPlayerSmallViewController *vc = [FMPlayerSmallViewController new];
     
     // To add the transparent background in iOS 8
     vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;

@@ -1,5 +1,5 @@
 //
-//  SmallPlayerViewController.m
+//  FMPlayerSmallViewController.m
 //  PlayerInterfaceLibrary
 //
 //  Created by Giuseppe Barbalinardo on 12/4/14.
@@ -7,11 +7,11 @@
 //
 
 #import <MediaPlayer/MediaPlayer.h>
-#import "SmallPlayerViewController.h"
+#import "FMPlayerSmallViewController.h"
 #import "FMAudioPlayer.h"
 #import "FMAudioItem.h"
 
-@interface SmallPlayerViewController ()
+@interface FMPlayerSmallViewController ()
 @property (strong, nonatomic) FMAudioPlayer *audioPlayer;
 @property (strong, nonatomic) FMAudioItem *audioItem;
 @property (strong, nonatomic) NSUserDefaults *userDefaults;
@@ -41,7 +41,7 @@
 
 @end
 
-@implementation SmallPlayerViewController
+@implementation FMPlayerSmallViewController
 
 - (id)initWithNibName:(NSString *)nibName bundle:(NSBundle *)nibBundle {
     if (self = [super initWithNibName:nibName bundle:nibBundle]) {

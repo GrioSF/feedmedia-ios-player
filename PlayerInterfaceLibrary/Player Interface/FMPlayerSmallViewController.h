@@ -1,5 +1,5 @@
 //
-//  SmallPlayerViewController.h
+//  FMPlayerSmallViewController.h
 //  PlayerInterfaceLibrary
 //
 //  Created by Giuseppe Barbalinardo on 12/4/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SmallPlayerViewController : UIViewController
+@interface FMPlayerSmallViewController : UIViewController
 
 @end
