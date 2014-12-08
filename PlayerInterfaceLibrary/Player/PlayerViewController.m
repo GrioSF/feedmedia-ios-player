@@ -8,6 +8,7 @@
 
 #import "PlayerViewController.h"
 #import "BigPlayerViewController.h"
+#import "SmallPlayerViewController.h"
 
 @interface PlayerViewController ()
 - (IBAction)showWebRadio:(id)sender;
@@ -20,10 +21,10 @@
     [super viewDidLoad];
 }
 
-
-
 - (IBAction)showWebRadio:(id)sender {
-    BigPlayerViewController *vc = [BigPlayerViewController new];
+    SmallPlayerViewController *vc = [SmallPlayerViewController new];
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     [self presentViewController:vc animated:YES completion:nil];
 }
 @end

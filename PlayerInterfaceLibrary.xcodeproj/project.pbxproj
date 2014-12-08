@@ -41,6 +41,8 @@
 		E37FF4401A312DE9009B1200 /* volume-mute.png in Resources */ = {isa = PBXBuildFile; fileRef = E37FF4351A312DE9009B1200 /* volume-mute.png */; };
 		E3A293A31A328CF300629AC0 /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A293A21A328CF300629AC0 /* slider.png */; };
 		E3A293B51A32994800629AC0 /* volume-control-wide.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A293B41A32994800629AC0 /* volume-control-wide.png */; };
+		E3D1619F1A353FC6007AE212 /* SmallPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1619D1A353FC6007AE212 /* SmallPlayerViewController.m */; };
+		E3D161A01A353FC6007AE212 /* SmallPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D1619E1A353FC6007AE212 /* SmallPlayerViewController.xib */; };
 		E3E2EA0D1A302A03001014EE /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E2EA0B1A302A03001014EE /* PlayerViewController.m */; };
 		E3E2EA0E1A302A03001014EE /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E2EA0C1A302A03001014EE /* PlayerViewController.xib */; };
 		E3E2EA361A302D16001014EE /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E2EA351A302D16001014EE /* CoreMedia.framework */; };
@@ -113,6 +115,9 @@
 		E37FF4351A312DE9009B1200 /* volume-mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-mute.png"; sourceTree = "<group>"; };
 		E3A293A21A328CF300629AC0 /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider.png; sourceTree = "<group>"; };
 		E3A293B41A32994800629AC0 /* volume-control-wide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-control-wide.png"; sourceTree = "<group>"; };
+		E3D1619C1A353FC6007AE212 /* SmallPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SmallPlayerViewController.h; path = "Player Interface/SmallPlayerViewController.h"; sourceTree = "<group>"; };
+		E3D1619D1A353FC6007AE212 /* SmallPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SmallPlayerViewController.m; path = "Player Interface/SmallPlayerViewController.m"; sourceTree = "<group>"; };
+		E3D1619E1A353FC6007AE212 /* SmallPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SmallPlayerViewController.xib; path = "Player Interface/SmallPlayerViewController.xib"; sourceTree = "<group>"; };
 		E3E2EA0A1A302A03001014EE /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerViewController.h; path = Player/PlayerViewController.h; sourceTree = "<group>"; };
 		E3E2EA0B1A302A03001014EE /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerViewController.m; path = Player/PlayerViewController.m; sourceTree = "<group>"; };
 		E3E2EA0C1A302A03001014EE /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PlayerViewController.xib; path = Player/PlayerViewController.xib; sourceTree = "<group>"; };
@@ -189,6 +194,9 @@
 				E34B9C661A30CC980032AAE7 /* BigPlayerViewController.h */,
 				E34B9C671A30CC980032AAE7 /* BigPlayerViewController.m */,
 				E34B9C681A30CC980032AAE7 /* BigPlayerViewController.xib */,
+				E3D1619C1A353FC6007AE212 /* SmallPlayerViewController.h */,
+				E3D1619D1A353FC6007AE212 /* SmallPlayerViewController.m */,
+				E3D1619E1A353FC6007AE212 /* SmallPlayerViewController.xib */,
 			);
 			name = "Player Interface";
 			sourceTree = "<group>";
@@ -387,6 +395,7 @@
 				E34B9C6A1A30CC980032AAE7 /* BigPlayerViewController.xib in Resources */,
 				E3A293B51A32994800629AC0 /* volume-control-wide.png in Resources */,
 				E37FF43E1A312DE9009B1200 /* volume-low.png in Resources */,
+				E3D161A01A353FC6007AE212 /* SmallPlayerViewController.xib in Resources */,
 				E37FF43A1A312DE9009B1200 /* skip.png in Resources */,
 				E3E2EA3C1A302EF6001014EE /* Default-568h@2x.png in Resources */,
 			);
@@ -418,6 +427,7 @@
 				E34B9C631A302FB80032AAE7 /* FMStation.m in Sources */,
 				E34B9C591A302FB80032AAE7 /* FMAsset.m in Sources */,
 				E34B9C5F1A302FB80032AAE7 /* FMError.m in Sources */,
+				E3D1619F1A353FC6007AE212 /* SmallPlayerViewController.m in Sources */,
 				E34B9C5A1A302FB80032AAE7 /* FMAudioItem.m in Sources */,
 				E362CF271A3024AB0013A8CD /* main.m in Sources */,
 				E3E2EA0D1A302A03001014EE /* PlayerViewController.m in Sources */,

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BigPlayerViewController">
+            <connections>
+                <outlet property="albumLabel" destination="ENu-aS-6aC" id="OJi-dV-X7K"/>
+                <outlet property="artistLabel" destination="hZR-cs-ifr" id="seL-cR-7VQ"/>
+                <outlet property="playButton" destination="2dT-cX-IMa" id="2UC-xC-NY2"/>
+                <outlet property="progressIndicator" destination="5IU-a2-0XA" id="Ekt-iv-tDl"/>
+                <outlet property="skipButton" destination="uiP-gE-Nco" id="IK2-1o-Dov"/>
+                <outlet property="thumbsDownButton" destination="Ws2-RZ-1Fq" id="gyJ-d0-OaX"/>
+                <outlet property="thumbsUpButton" destination="aoL-dG-Nik" id="meC-5T-3JF"/>
+                <outlet property="timeElapsedLabel" destination="TRk-hz-wa3" id="loe-K4-5Ti"/>
+                <outlet property="titleLabel" destination="fwg-nc-1f9" id="xjR-Nu-DsN"/>
+                <outlet property="totalTimeLabel" destination="NZJ-7z-XIf" id="vMX-uZ-cY3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="volumeButton" destination="dWq-A7-yKk" id="p4R-ke-6Ai"/>
+                <outlet property="volumeSlider" destination="DLq-P9-Jrq" id="gKx-6U-pZV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZNh-Mr-IYb">
+                    <rect key="frame" x="0.0" y="180" width="320" height="300"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="IZZ-uv-fmV">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                        </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Faf-vU-30l">
+                            <rect key="frame" x="10" y="10" width="300" height="280"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEp-mq-WWL">
+                                    <rect key="frame" x="271" y="14" width="15" height="15"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="15" id="kPj-59-Hwg"/>
+                                        <constraint firstAttribute="width" constant="15" id="qnL-am-8wY"/>
+                                    </constraints>
+                                    <state key="normal" backgroundImage="close.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="closeButtonTouched:" destination="-1" eventType="touchUpInside" id="hUn-MC-gtO"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sam Smith" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZR-cs-ifr">
+                                    <rect key="frame" x="23" y="53" width="260" height="21"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stay With Me" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwg-nc-1f9">
+                                    <rect key="frame" x="23" y="73" width="260" height="27"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5 Seconds of Summer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENu-aS-6aC">
+                                    <rect key="frame" x="23" y="100" width="260" height="21"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws2-RZ-1Fq">
+                                    <rect key="frame" x="20" y="180" width="19" height="21"/>
+                                    <state key="normal" backgroundImage="thumbsdown.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="thumbsDownButtonTouched:" destination="-1" eventType="touchUpInside" id="ylR-XH-fd3"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoL-dG-Nik">
+                                    <rect key="frame" x="100" y="180" width="19" height="21"/>
+                                    <state key="normal" backgroundImage="thumbsup.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="thumbsUpButtonTouched:" destination="-1" eventType="touchUpInside" id="tgg-lg-7gF"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiP-gE-Nco">
+                                    <rect key="frame" x="255" y="180" width="30" height="21"/>
+                                    <state key="normal" backgroundImage="skip.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="skipButtonTouched:" destination="-1" eventType="touchUpInside" id="SIs-Eg-OfK"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-A7-yKk">
+                                    <rect key="frame" x="20" y="222" width="31" height="21"/>
+                                    <state key="normal" image="volume-high.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="volumeButtonTouched:" destination="-1" eventType="touchUpInside" id="zOi-GC-zCF"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2dT-cX-IMa">
+                                    <rect key="frame" x="178" y="180" width="28" height="21"/>
+                                    <color key="backgroundColor" red="0.69197487602412389" green="0.27570295227366337" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <state key="normal" image="play.png">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="playButtonTouched:" destination="-1" eventType="touchUpInside" id="4n9-qi-qpu"/>
+                                    </connections>
+                                </button>
+                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DLq-P9-Jrq">
+                                    <rect key="frame" x="57" y="224" width="228" height="31"/>
+                                    <color key="tintColor" red="0.61959438131313127" green="0.61959438131313127" blue="0.61959438131313127" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="thumbTintColor" red="0.0" green="0.82914668748637599" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <connections>
+                                        <action selector="volumeSliderValueChanged:" destination="-1" eventType="valueChanged" id="CdJ-EU-JuF"/>
+                                    </connections>
+                                </slider>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-:--" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRk-hz-wa3">
+                                    <rect key="frame" x="8" y="142" width="38" height="21"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-:--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZJ-7z-XIf">
+                                    <rect key="frame" x="259" y="142" width="34" height="21"/>
+                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5IU-a2-0XA">
+                                    <rect key="frame" x="59" y="152" width="187" height="2"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </progressView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="LEp-mq-WWL" firstAttribute="top" secondItem="Faf-vU-30l" secondAttribute="top" constant="14" id="LDy-Sn-cUC"/>
+                                <constraint firstAttribute="width" constant="300" id="QNI-B7-CNN"/>
+                                <constraint firstAttribute="trailing" secondItem="LEp-mq-WWL" secondAttribute="trailing" constant="14" id="u8o-jx-YYf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IZZ-uv-fmV" secondAttribute="trailing" id="46g-wQ-yWY"/>
+                        <constraint firstAttribute="height" constant="300" id="BYc-sV-awL"/>
+                        <constraint firstItem="IZZ-uv-fmV" firstAttribute="leading" secondItem="ZNh-Mr-IYb" secondAttribute="leading" id="KnT-VZ-9Wn"/>
+                        <constraint firstAttribute="bottom" secondItem="Faf-vU-30l" secondAttribute="bottom" constant="10" id="Rk8-bZ-eHC"/>
+                        <constraint firstAttribute="centerY" secondItem="Faf-vU-30l" secondAttribute="centerY" id="Uwx-fe-oA2"/>
+                        <constraint firstItem="Faf-vU-30l" firstAttribute="top" secondItem="ZNh-Mr-IYb" secondAttribute="top" constant="10" id="cjA-mw-kuk"/>
+                        <constraint firstItem="IZZ-uv-fmV" firstAttribute="top" secondItem="ZNh-Mr-IYb" secondAttribute="top" id="jbm-WG-J0P"/>
+                        <constraint firstAttribute="centerX" secondItem="Faf-vU-30l" secondAttribute="centerX" id="oE5-gA-XHX"/>
+                        <constraint firstAttribute="bottom" secondItem="IZZ-uv-fmV" secondAttribute="bottom" id="vUv-uf-mdG"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.40218968398527388" blue="0.85829400697680081" alpha="0.0" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ZNh-Mr-IYb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="250-JM-qeV"/>
+                <constraint firstAttribute="bottom" secondItem="ZNh-Mr-IYb" secondAttribute="bottom" id="IbV-0m-8ag"/>
+                <constraint firstAttribute="trailing" secondItem="ZNh-Mr-IYb" secondAttribute="trailing" id="QEL-F4-YPr"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="335"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background.png" width="640" height="960"/>
+        <image name="close.png" width="30" height="30"/>
+        <image name="play.png" width="57" height="42"/>
+        <image name="skip.png" width="61" height="42"/>
+        <image name="thumbsdown.png" width="39" height="42"/>
+        <image name="thumbsup.png" width="38" height="42"/>
+        <image name="volume-high.png" width="62" height="42"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
