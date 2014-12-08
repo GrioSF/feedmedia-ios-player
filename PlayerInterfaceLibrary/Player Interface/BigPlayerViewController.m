@@ -281,7 +281,6 @@
         [self.audioPlayer dislike];
         [self setItemDisliked:YES];
         [self setItemLiked:NO];
-        [self.audioPlayer skip];
     }
     [self updateLikeButtons];
 }
