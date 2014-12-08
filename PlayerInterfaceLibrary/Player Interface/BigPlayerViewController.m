@@ -30,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *timeElapsedLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalTimeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 - (IBAction)playButtonTouched:(id)sender;
 - (IBAction)skipButtonTouched:(id)sender;
 - (IBAction)thumbsUpButtonTouched:(id)sender;
@@ -77,6 +78,15 @@
                                              selector:@selector(updatePlayer)
                                                  name:FMAudioPlayerPlaybackStateDidChangeNotification
                                                object:self.audioPlayer];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(showErrorSkip:)
+                                                 name:FMAudioPlayerSkipFailedNotification
+                                               object:self.audioPlayer];
+}
+
+- (void)showErrorSkip {
+    self.errorLabel.text = @"User has no skips available right now";
 }
 
 - (void)dealloc {
@@ -307,6 +317,17 @@
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
+}
+
+- (void)showErrorSkip:(NSNotification *)notification {
+    NSDictionary *dict = [notification userInfo];
+    NSError *error = (NSError *)dict[FMAudioPlayerSkipFailureErrorKey];
+    self.errorLabel.text = [error localizedDescription];
+    double delayInSeconds = .8;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        self.errorLabel.text = @"";
+    });
 }
 
 @end

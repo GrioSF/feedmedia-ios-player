@@ -11,6 +11,7 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <objects>
@@ -18,6 +19,7 @@
             <connections>
                 <outlet property="albumLabel" destination="ENu-aS-6aC" id="OJi-dV-X7K"/>
                 <outlet property="artistLabel" destination="hZR-cs-ifr" id="seL-cR-7VQ"/>
+                <outlet property="errorLabel" destination="X7B-lZ-9K3" id="uuc-eu-s6d"/>
                 <outlet property="playButton" destination="2dT-cX-IMa" id="2UC-xC-NY2"/>
                 <outlet property="progressIndicator" destination="5IU-a2-0XA" id="Ekt-iv-tDl"/>
                 <outlet property="skipButton" destination="uiP-gE-Nco" id="IK2-1o-Dov"/>
@@ -150,6 +152,15 @@
                         <constraint firstAttribute="height" constant="229" id="kQX-yV-yac"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7B-lZ-9K3">
+                    <rect key="frame" x="15" y="453" width="290" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="6ti-7M-esv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="0.40218968398527388" blue="0.85829400697680081" alpha="0.0" colorSpace="calibratedRGB"/>
             <constraints>
@@ -157,10 +168,13 @@
                 <constraint firstAttribute="centerY" secondItem="Faf-vU-30l" secondAttribute="centerY" id="1hV-W3-vrt"/>
                 <constraint firstAttribute="centerX" secondItem="Faf-vU-30l" secondAttribute="centerX" id="555-C5-uBV"/>
                 <constraint firstAttribute="bottom" secondItem="Rig-lh-UaI" secondAttribute="bottom" id="BWZ-0N-fEO"/>
+                <constraint firstAttribute="bottom" secondItem="X7B-lZ-9K3" secondAttribute="bottom" constant="6" id="CxI-GT-zeo"/>
                 <constraint firstAttribute="trailing" secondItem="Rig-lh-UaI" secondAttribute="trailing" id="NeH-HY-29i"/>
+                <constraint firstAttribute="centerX" secondItem="X7B-lZ-9K3" secondAttribute="centerX" id="TRX-TY-qvM"/>
                 <constraint firstItem="LEp-mq-WWL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="VGX-SD-4i6"/>
                 <constraint firstItem="LEp-mq-WWL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="ahk-AB-UME"/>
                 <constraint firstItem="Rig-lh-UaI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bZv-Xe-xDB"/>
+                <constraint firstItem="X7B-lZ-9K3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ovi-ZY-xcx"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>
