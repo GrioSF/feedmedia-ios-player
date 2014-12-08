@@ -24,5 +24,21 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "-[SmallPlayerViewController initWithNibName:bundle:]:SmallPlayerViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.parentViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SmallPlayerViewController viewDidLoad]:SmallPlayerViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.presentingViewController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

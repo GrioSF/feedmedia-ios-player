@@ -23,8 +23,12 @@
 
 - (IBAction)showWebRadio:(id)sender {
     SmallPlayerViewController *vc = [SmallPlayerViewController new];
-    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    
+    // To add the transparent background in iOS 8
     vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    // To add the transparent background in iOS 8
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+
     [self presentViewController:vc animated:YES completion:nil];
 }
 @end

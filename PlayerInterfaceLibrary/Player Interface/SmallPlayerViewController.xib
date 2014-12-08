@@ -14,7 +14,7 @@
         </mutableArray>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BigPlayerViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SmallPlayerViewController">
             <connections>
                 <outlet property="albumLabel" destination="ENu-aS-6aC" id="OJi-dV-X7K"/>
                 <outlet property="artistLabel" destination="hZR-cs-ifr" id="seL-cR-7VQ"/>

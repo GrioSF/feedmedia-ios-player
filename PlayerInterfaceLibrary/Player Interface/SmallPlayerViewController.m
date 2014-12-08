@@ -153,7 +153,6 @@
             [self.playButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
             self.skipButton.alpha = 1;
             self.playButton.alpha = 1;
-            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateWaitingForItem:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
@@ -161,27 +160,23 @@
             self.skipButton.alpha = 0.25;
             self.timeElapsedLabel.text = @"0:00";
             self.totalTimeLabel.text = @"-:--";
-            self.progressIndicator.hidden = NO;
             [self resetLikeDislikeAppearance];
             break;
         case FMAudioPlayerPlaybackStateReadyToPlay:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.skipButton.alpha = 1;
             self.playButton.alpha = 1;
-            self.progressIndicator.hidden = NO;
             [self resetLikeDislikeAppearance];
             break;
         case FMAudioPlayerPlaybackStatePaused:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.skipButton.alpha = 1;
             self.playButton.alpha = 1;
-            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateStalled:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
             self.playButton.alpha = 0.25;
             self.skipButton.alpha = 0.25;
-            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateRequestingSkip:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
@@ -189,7 +184,6 @@
             self.skipButton.alpha = 0.25;
             self.timeElapsedLabel.text = @"0:00";
             self.totalTimeLabel.text = @"-:--";
-            self.progressIndicator.hidden = NO;
             break;
         case FMAudioPlayerPlaybackStateComplete:
             [self.playButton setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
@@ -197,7 +191,6 @@
             self.skipButton.alpha = 1;
             self.timeElapsedLabel.text = @"";
             self.totalTimeLabel.text = @"";
-            self.progressIndicator.hidden = YES;
             self.skipButton.alpha = 0.25;
             break;
         default:
