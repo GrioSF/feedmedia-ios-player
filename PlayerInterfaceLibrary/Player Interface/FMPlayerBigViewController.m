@@ -7,9 +7,10 @@
 //
 
 #import <MediaPlayer/MediaPlayer.h>
+#import <FeedMediaSdk/FMAudioPlayer.h>
+#import <FeedMediaSdk/FMAudioItem.h>
+
 #import "FMPlayerBigViewController.h"
-#import "FMAudioPlayer.h"
-#import "FMAudioItem.h"
 
 @interface FMPlayerBigViewController ()
 @property (strong, nonatomic) FMAudioPlayer *audioPlayer;
