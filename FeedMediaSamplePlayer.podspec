@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.author       = { "FUZZ ftw!" => "eric@fuzz.com" }
   s.source       = { :git => "https://github.com/GrioSF/feedmedia-ios-player.git", :tag => '1.0.0' }
   s.source_files  = "PlayerInterfaceLibrary/Player Interface", "PlayerInterfaceLibrary/Player Interface/**/*.{h,m,xib,png}"
+  s.resources    =  "PlayerInterfaceLibrary/Player Interface/*.{xib,png}"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   
   s.dependency 'FeedMediaSdk', '~> 1.0.0' 
