@@ -13,6 +13,7 @@
 		E362CF2A1A3024AB0013A8CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E362CF291A3024AB0013A8CD /* AppDelegate.m */; };
 		E362CF321A3024AB0013A8CD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E362CF311A3024AB0013A8CD /* Images.xcassets */; };
 		E362CF411A3024AB0013A8CD /* PlayerInterfaceLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E362CF401A3024AB0013A8CD /* PlayerInterfaceLibraryTests.m */; };
+		E380C5551A37C95D0060722D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E380C5541A37C95D0060722D /* Default-568h@2x.png */; };
 		E3D1619F1A353FC6007AE212 /* FMPlayerSmallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D1619D1A353FC6007AE212 /* FMPlayerSmallViewController.m */; };
 		E3D161A01A353FC6007AE212 /* FMPlayerSmallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D1619E1A353FC6007AE212 /* FMPlayerSmallViewController.xib */; };
 		E3D161B41A355F5E007AE212 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E3D161A41A355F5E007AE212 /* background.png */; };
@@ -33,7 +34,6 @@
 		E3D161C31A355F5E007AE212 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3D161B31A355F5E007AE212 /* Lato-Regular.ttf */; };
 		E3D161C71A355FB4007AE212 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D161C51A355FB4007AE212 /* PlayerViewController.m */; };
 		E3D161C81A355FB4007AE212 /* PlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D161C61A355FB4007AE212 /* PlayerViewController.xib */; };
-		E3E2EA3C1A302EF6001014EE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3E2EA3B1A302EF6001014EE /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +60,7 @@
 		E362CF3A1A3024AB0013A8CD /* PlayerInterfaceLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayerInterfaceLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E362CF3F1A3024AB0013A8CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E362CF401A3024AB0013A8CD /* PlayerInterfaceLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerInterfaceLibraryTests.m; sourceTree = "<group>"; };
+		E380C5541A37C95D0060722D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Player Interface/assets/Default-568h@2x.png"; sourceTree = "<group>"; };
 		E3D1619C1A353FC6007AE212 /* FMPlayerSmallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMPlayerSmallViewController.h; path = "Player Interface/FMPlayerSmallViewController.h"; sourceTree = "<group>"; };
 		E3D1619D1A353FC6007AE212 /* FMPlayerSmallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMPlayerSmallViewController.m; path = "Player Interface/FMPlayerSmallViewController.m"; sourceTree = "<group>"; };
 		E3D1619E1A353FC6007AE212 /* FMPlayerSmallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FMPlayerSmallViewController.xib; path = "Player Interface/FMPlayerSmallViewController.xib"; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		E3D161C41A355FB4007AE212 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
 		E3D161C51A355FB4007AE212 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
 		E3D161C61A355FB4007AE212 /* PlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerViewController.xib; sourceTree = "<group>"; };
-		E3E2EA3B1A302EF6001014EE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +132,7 @@
 		E34B9C6E1A30DE640032AAE7 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E380C5541A37C95D0060722D /* Default-568h@2x.png */,
 				E3D161A41A355F5E007AE212 /* background.png */,
 				E3D161A51A355F5E007AE212 /* close.png */,
 				E3D161A61A355F5E007AE212 /* pause.png */,
@@ -155,7 +156,6 @@
 		E362CF181A3024AB0013A8CD = {
 			isa = PBXGroup;
 			children = (
-				E3E2EA3B1A302EF6001014EE /* Default-568h@2x.png */,
 				E362CF231A3024AB0013A8CD /* PlayerInterfaceLibrary */,
 				E362CF3D1A3024AB0013A8CD /* PlayerInterfaceLibraryTests */,
 				E362CF221A3024AB0013A8CD /* Products */,
@@ -294,6 +294,7 @@
 				E362CF321A3024AB0013A8CD /* Images.xcassets in Resources */,
 				E3D161B41A355F5E007AE212 /* background.png in Resources */,
 				E3D161C11A355F5E007AE212 /* volume-medium.png in Resources */,
+				E380C5551A37C95D0060722D /* Default-568h@2x.png in Resources */,
 				E3D161C31A355F5E007AE212 /* Lato-Regular.ttf in Resources */,
 				E3D161B71A355F5E007AE212 /* play.png in Resources */,
 				E3D161B91A355F5E007AE212 /* skip.png in Resources */,
@@ -309,7 +310,6 @@
 				E3D161A01A353FC6007AE212 /* FMPlayerSmallViewController.xib in Resources */,
 				E3D161BC1A355F5E007AE212 /* thumbsdown.png in Resources */,
 				E3D161BD1A355F5E007AE212 /* thumbsup.png in Resources */,
-				E3E2EA3C1A302EF6001014EE /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
