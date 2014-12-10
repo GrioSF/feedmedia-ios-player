@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   s.source_files  = "PlayerInterfaceLibrary/Player Interface", "PlayerInterfaceLibrary/Player Interface/**/*.{h,m}"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
-  s.dependency 'FeedMediaSdk', :git => 'https://github.com/fuzz-radio/iOS-SDK.git'
+  s.dependency 'FeedMediaSdk', :git => "https://github.com/fuzz-radio/iOS-SDK.git" , :tag => '1.0.0' 
   s.platform     = :ios, "7.0"
   s.public_header_files = "PlayerInterfaceLibrary/Player Interface/**/*.h"
   s.requires_arc = true
