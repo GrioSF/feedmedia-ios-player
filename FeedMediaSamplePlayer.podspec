@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   
   s.dependency 'FeedMediaSdk', '~> 1.0.0' 
   
-  s.post_install do |library_representation|
+  s.prepare_command do |library_representation|
     require 'rexml/document'
 
     library = library_representation.library
