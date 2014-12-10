@@ -24,9 +24,7 @@
 - (IBAction)showWebRadio:(id)sender {
     FMPlayerSmallViewController *vc = [FMPlayerSmallViewController new];
     
-    // To add the transparent background in iOS 8
-    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    // To add the transparent background in iOS 8
+    // To add the transparent background in iOS 7
     self.modalPresentationStyle = UIModalPresentationCurrentContext;
 
     [self presentViewController:vc animated:YES completion:nil];

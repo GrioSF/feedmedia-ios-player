@@ -49,6 +49,7 @@
         _audioPlayer = [FMAudioPlayer sharedPlayer];
         _isMute = NO;
         _userDefaults = [NSUserDefaults standardUserDefaults];
+        self.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     }
     return self;
 }
