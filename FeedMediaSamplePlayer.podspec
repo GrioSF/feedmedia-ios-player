@@ -18,8 +18,8 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/fuzz-radio/iOS-SDK"
   s.author       = { "FUZZ ftw!" => "eric@fuzz.com" }
-  s.source       = { :git => "https://github.com/GrioSF/feedmedia-ios-player.git", :commit => "9c622e84fc5f912850b3c9f5ff211abd200a562d" }
-  s.source_files  = "PlayerInterfaceLibrary/Player Interface", "PlayerInterfaceLibrary/Player Interface/**/*.{h,m}"
+  s.source       = { :git => "https://github.com/GrioSF/feedmedia-ios-player.git", :tag => '1.0.0' }
+  s.source_files  = "PlayerInterfaceLibrary/Player Interface", "PlayerInterfaceLibrary/Player Interface/**/*.{h,m,xib,png}"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   
   s.dependency 'FeedMediaSdk', '~> 1.0.0' 
