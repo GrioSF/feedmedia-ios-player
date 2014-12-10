@@ -27,10 +27,12 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "7.0"
   s.public_header_files = "PlayerInterfaceLibrary/Player Interface/**/*.h"
   s.requires_arc = true
-  post_install do |installer|
-  installer.project.targets.each do |target|
-    puts "#{target.name}"
+  s.post_install do |installer|
+    installer.project.targets.each do |target|
+      puts "#{target.name}"
+    end
   end
+  
   # s.post_install do |library_representation|
   #   require 'rexml/document'
 
